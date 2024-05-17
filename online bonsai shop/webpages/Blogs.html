@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blogs</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/home.css">
+    <style>
+        *{
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Century Gothic';
+        text-decoration: none;
+        }
+        header{
+            background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(../images/bonsainav.jpg);       /*background image and style*/
+            height: 12vh;
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+             box-shadow: 0 0 11px 5px #182B19;
+        }
+
+
+        a{
+            text-decoration: none;
+        }
+        ul{
+            list-style: none;
+        }
+        body{
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #blog{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 40px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .blog-heading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .blog-heading span{
+            color: #f33cf3;
+        }
+        .blog-heading h3{
+            font-size: 2.4rem;
+            color: floralwhite;
+            font-weight: 600;
+            background-color: skyblue;
+        }
+        .blog-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+        .blog-box{
+            width: 350px;
+            background-color: #ffffff;
+            border: 1px solid #ececec;
+            margin: 20px;
+            box-shadow: 0px 0 11px 4px #B8B8B8;
+        }
+
+        .blog-img{
+            width: 100%;
+            height: auto;
+        }
+        .blog-img img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .blog-text{
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-text span{
+            color: #f33cf3;
+            font-size: 0.9rem;
+        }
+        .blog-text .blog-title{
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #272727;
+        }
+        .blog-text .blog-title:hover{
+            color: #f33cf3;
+            transition: all ease 0.3s;
+        }
+        .blog-text p{
+            color: #9b9b9b;
+            font-size: 0.9rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 20px 0px;
+        }
+        .blog-text a{
+            color: #0f0f0f;
+        }
+        .blog-text a:hover{
+            color: #f33cf3;
+            transition: all ease 0.3s;
+        }
+
+        /*media tags*/
+
+        @media(max-width:1250px){
+            .blog-box{
+                width: 300px;
+            }
+        }
+        @media(max-width:1100px){
+            .blog-box{
+                width: 70%;
+            }
+        }
+        @media(max-width:550px){
+            .blog-box{
+                margin: 20px 10px;
+                width: 100%;
+            }
+            #blog{
+                padding: 20px;
+            }
+        }
+
+        @media(max-width:1300px){           /*media tag for signup bar*/
+              .signup{
+                margin: 50px 0px 0px 60px;
+            }
+        }
+
+
+
+            @media(max-width:670px){        /*media tag for navigation bar*/
+            
+            nav ul{ 
+                width: 100%;
+                
+                flex-direction: column;
+                text-align: center;
+                background-color: black;
+                opacity: 0.5;
+                
+            }
+            .nav_bar ul li{
+                padding: 15px;
+            
+            }
+            .nav_bar ul li a{
+                margin-right: 0px;
+            }
+            .logo a img{
+                width: 100px;
+            }
+
+            header{
+             background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(../images/bonsainav.jpg);       /*background image and style*/
+             height: 60vh;
+         }
+        }
+    </style>
+</head>
+<body>
+   <header>
+        <div class="main">
+
+            <label class="logo"><a href="Home.html"><img src="../images/logo.png">
+            </label>
+
+            <nav class="nav_bar">
+                        
+            <ul>
+                <li class="active1"> <a href="Home.html">Home</a></li>
+                <li class="active2"><a href="Blogs.html">Blogs</a></li>
+                <li class="active3"><a href="Products.html">Products</a></li>
+                <li class="active3"><a href="Research.html">Research</a></li>               
+                <li class="active4"><a href="aboutus.html">About Us</a></li>
+            </ul>
+            </nav>
+
+        </div>
+    </header>
+</body>
+<body class="bgbody">
+    <br><br><br>
+     
+     <section id="blog">
+        <div class="blog-heading">
+            <span>Bonsai World's </span>
+            <h3>Blogs</h3>
+        </div>
+
+        <div class="blog-container">
+
+            <div class="blog-box">
+
+                <div class="blog-img">
+                    <img src="../images/blogpic.jpg" alt="Blog"/>
+                </div>
+                <div class="blog-text">
+                    <span>27 Dec 2022/Technology Nowadays</span>
+                    <a href="blogmain.html" class="blog-title" >How has the technology been used nowadays?</a>
+                    <p>Technology affects almost every aspect of 21st century life,.... </p>
+                    <a href="blogmain.html">Read More</a>
+                </div>
+
+            </div>
+
+            <div class="blog-box">
+
+                <div class="blog-img">
+                    <img src="../images/advantage.png" alt="Blog"/>
+                </div>
+                <div class="blog-text">
+                    <span>27 Dec 2022/Technology Nowadays</span>
+                    <a href="blogmain.html" class="blog-title" >Advantages and Disadvantages of...</a>
+                    <p>Technology provides the different services to mankind which has made....</p>
+                    <a href="blogmain.html">Read More</a>
+                </div>
+
+            </div>
+
+
+            <div class="blog-box">
+
+                <div class="blog-img">
+                    <img src="../images/onlinebonsai.jpg" alt="Blog"/>
+                </div>
+                <div class="blog-text">
+                    <span>27 Dec 2022/Technology Nowadays</span>
+                    <a href="blogmain.html" class="blog-title" >Impact of technology while selling bonsai plants</a>
+                    <p>As mentioned above technology has lots of positive and negative impact as mentioned above....</p>
+                    <a href="blogmain.html">Read More</a>
+                </div>
+
+            </div>
+
+
+            <div class="blog-box">
+
+                <div class="blog-img">
+                    <img src="../images/allbonsai.jpg" alt="Blog"/>
+                </div>
+                <div class="blog-text">
+                    <span>30 Dec 2022/National Bonsai</span>
+                    <a href="#" class="blog-title" >National trade in bonsai e-commerce</a>
+                    <p>Online bonsai commerce is becoming a viable means to sell and buy such .... </p>
+                    <a href="#">Read More</a>
+                </div>
+
+            </div>
+
+            <div class="blog-box">
+
+                <div class="blog-img">
+                    <img src="../images/socialmedia.jpg" alt="Blog"/>
+                </div>
+                <div class="blog-text">
+                    <span>07 Nov 2022/Technology Nowadays</span>
+                    <a href="#" class="blog-title" >Cyber crime rate through social medias</a>
+                    <p>The increasing use of social media also results increasing of cyber crimes....</p>
+                    <a href="#">Read More</a>
+                </div>
+
+            </div>
+
+
+            <div class="blog-box">
+
+                <div class="blog-img">
+                    <img src="../images/neuralink.jpg" alt="Blog"/>
+                </div>
+                <div class="blog-text">
+                    <span>27 Dec 2022/Technology Nowadays</span>
+                    <a href="#" class="blog-title" >Neuralink: as a new era-Medical science revolution</a>
+                    <p>Medical science and AI has become the crucial.....</p>
+                    <a href="#">Read More</a>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+     </section>
+ </body>
+
+
+
+
+     <footer class="footerhome">
+        <div class="row">
+            <div class="footer_column">
+                <h3>Our Shop</h3>
+                <ul>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Policies</a></li>
+                    <li><a href="#">Awards</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_column">
+                <h3>Contact Info</h3>
+                <ul style="color: blue;">
+                    <li><b>Address:</b> <br> Bharatpur-7, Terhasaal chowk</li>
+                    <li><b>Contact:</b> <br> +9779856374637</li>
+                    <li><b>Email:</b> <br> bonsaiworld232@gmail.com</li>
+                    <li><b>Working hours:</b> <br> 8:00 am to 8:00 pm (daily)</li>
+
+                </ul>
+            </div>
+
+            <div class="footer_column">
+                <h3>Our Categories</h3>
+                <ul>
+                    <li><a href="#">hanging</a></li>
+                    <li><a href="#">Ceramic</a></li>
+                    <li><a href="#">Indoor</a></li>
+                    <li><a href="#">Outdoor</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_column">
+                <h3>FAQs Groups</h3>
+                <ul>
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">Payment</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                </ul>
+            </div>
+
+
+            <div class="map">
+                <h3>Visit Us</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.661955294281!2d84.40939793635027!3d27.66045007415548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3994fae5fd19bf4f%3A0x33c8b5ca50f03007!2zTUM2Nis4UDUsIOCkreCksOCkpOCkquClgeCksCA0NDIwMA!5e0!3m2!1sne!2snp!4v1672331993385!5m2!1sne!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+
+            <div class="footer_column">
+                <h3>Follow Us</h3>
+                <div class="social_follow" style="margin-top: 20px; ">
+                    <a href="#"><img src="../images/facebook.png" width="30px" height="auto"></a>
+                    <a href="#"><img src="../images/twitter.jpeg" width="30px" height="auto"></a>
+                    <a href="#"><img src="../images/instagram.jpg" width="30px" height="auto"></a>
+                    <a href="#"><img src="../images/linkedin.png" width="30px" height="auto"></a>
+                    <a href="#"><img src="../images/youtube.png" width="30px" height="auto"></a>
+                </div>
+            </div>
+            <div class="app">
+                <h3>Download Our App</h3>
+                <img src="../images/qr.jpg" width="130px" height="auto">
+            </div>
+
+            <div class="signup">
+                <h3>Join With Us</h3>
+
+                <div class="email">
+                    <form action="">
+                    <label for="email"><b>Email:</b> </label>
+                    <input type="email" placeholder="Enter your email address" name="emailadd">
+                    <input type="submit" value="Sign up">
+                </div>  
+            </div>
+
+            
+
+
+
+
+        </div>
+    </footer>
+
+    
+        <div class="lastfooter">
+            <hr>
+			<span><center><b>Developed by:</b> <a href="aboutmesaksham.html">Saksham</a>|<a href="aboutmesandesh.html">Sandesh</a>|<a href="aboutmeaachal.html">Aachal</a>|<a href="aboutmekritagya.html">Kritagya</a></center></span>
+        </div>
+        <div class="copyright" style="text-align: right; font-size: 13px;">copyright &copy <b>BONSAI WORLD</b>||All Rights Reserved</div>
+    </footer>
+
+    
+</body>
+     
+</html>

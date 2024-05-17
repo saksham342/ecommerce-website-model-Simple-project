@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BONSAI WORLD</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keyword" content="bonsai, plants, herb, vase, vaseplant">
+	<link rel="stylesheet" type="text/css" href="../css/home.css">
+	<script src="../javascript/script.js"></script> 
+
+	<style>
+		*{									/*whole page style*/
+		margin: 0;
+		padding: 0;
+		font-family: 'Century Gothic';
+		text-decoration: none;
+	}
+
+		header{
+		background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(../images/bonsai.jpg);		/*background image and style*/
+		height: 100vh;
+		background-size: cover;
+		background-position: center;
+		opacity: 1;
+		
+	}
+		.whyus:hover .ansdesc {
+	            transform: scale(1.05);
+	            transition: 0.3s;
+	            border: 1px solid black;
+	            box-shadow: 0px 0 11px 4px #000;
+	        }
+	    .title{						/*style of middle large title*/
+		position: absolute;
+		top: 65%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+
+	.title h1{						/*style of text of middle large title*/
+		color: white;
+		font-size: 40px;
+	}
+
+	.button{						/*styles(positions) of middle buttons*/
+		position: absolute;
+		top: 75%;
+		left: 39%;
+		
+	}
+
+
+	.btn{							/*styles of text of  middle buttons*/
+		border: 3px solid #fff;
+		padding: 10px 30px;
+		color: #fff;
+		text-decoration: none;
+		transition: 0.6s ease;
+	}
+
+	.btn:hover{						/*after hovering in middle buttons*/
+		background-color: white;
+		color: #000;
+		transition: 0.5s ease;
+		font-family: italic;
+	}
+
+	.whyustopic{
+		text-align: center;
+		font-size:30px;
+		background-color: #ffffd0;
+		font-family: cursive;
+	}
+
+
+
+	.whyusdetails{
+		border: 1px solid gray;
+		border-radius: 50px;
+		margin: 10px;
+		padding: 50px;
+		font-family: cursive;
+	}
+
+	.whyques{
+		text-align: center;
+	}
+
+	.whyanswer{
+		text-align: center;
+		color: green;
+	}
+
+	.ansdesc{
+		text-align: justify;
+	}
+
+
+	.bestselling{
+	    display: flex;				/*display type if image boxes*/
+	    justify-content: center;   /* justify the image box at center automatically*/
+	    align-items: center;
+	    margin: 40px;
+	    flex-wrap: wrap;
+	}
+	.item-box{
+	    width: 900px;
+	    height: auto;
+	    background-color: #ffffd0;
+	    margin: 20px;
+	}
+	.item-details{
+		margin:0px 10px 0px 10px;
+	}
+	.best-image{
+	    width: 100%;
+	    height: auto;
+	}
+	.best-image img{
+	    width: 100%;
+	    height: 100%;
+	    object-fit: cover;
+	    object-position: center;
+	}
+
+	.best-image img:hover{
+		
+		transform: scale(0.95);
+		transition: 0.3s ;
+	}
+
+
+	.buynow:hover{
+		color: white;
+		transition: 0.6s;
+		cursor: pointer;
+		
+	}
+
+	.star img{
+		width: 15%;
+		height: auto;
+	}
+
+	.description{
+		font-family: Comic Sans MS, Comic Sans, cursive;
+		text-align: justify;
+	}
+
+	.listcart:hover{
+			background-color: #FF917A;
+			transition: 0.2s ease;
+			cursor: pointer;
+		}
+
+	@media(max-width:670px){			/*media tag for middle title,buttons and logo*/
+		.title h1{
+			font-size: 20px;
+
+		}
+		.button .btn{
+			font-size: 12px;
+			padding: 0px;
+			margin-top: -30px;
+		}
+		
+	}
+
+	@media(max-width:670px){		/*media tag for navigation bar*/
+		
+		nav ul{	
+			width: 100%;
+			
+			flex-direction: column;
+			text-align: center;
+			background-color: black;
+			opacity: 0.5;
+			
+		}
+		.nav_bar ul li{
+			padding: 15px;
+		
+		}
+		.nav_bar ul li a{
+			margin-right: 0px;
+		}
+		.logo a img{
+			width: 100px;
+		}
+		 .button{						/*styles(positions) of middle buttons*/
+		position: absolute;
+		top: 70%;
+		left: 37%;
+		}
+
+
+	@media(max-width:1100px){			/*media tag for best selling items*/
+	    .item-box{
+	        width: 70%;
+
+	    }
+	}
+	@media(max-width:550px){			/*media tag for best selling items*/
+	    .item-box{
+	        margin: 20px 10px;
+	        width: 100%;
+	    }
+	    .button{						/*styles(positions) of middle buttons*/
+		position: absolute;
+		top: 70%;
+		left: 34%;
+		
+	}
+	  
+	}   
+
+	@media(max-width:1300px){			/*media tag for signup footer*/
+	      .signup{
+	    	margin: 50px 0px 0px 60px;
+	    }
+	}
+
+
+	</style>
+
+</head>
+<body>
+	<header>
+		<div class="main">
+
+			<label class="logo"><a href="Home.html"><img src="../images/logo.png">
+			</label>
+
+			<nav class="nav_bar">
+						
+			<ul>
+				<li class="active1"> <a href="Home.html">Home</a></li>
+				<li class="active2"><a href="Blogs.html">Blogs</a></li>
+				<li class="active3"><a href="Products.html">Products</a></li>
+				<li class="active3"><a href="Research.html">Research</a></li>				
+				<li class="active4"><a href="aboutus.html">About Us</a></li>
+			</ul>
+			</nav>
+
+		</div>
+	</header>
+	<section>
+		
+		<div class="title">
+			<h1>BONSAI WORLD</h1>
+		</div>
+		<div class="button">
+			<a href="https://www.youtube.com/channel/UCNDIZaXi4rM9dJZQ3bYTP5g" target="_blank" class="btn">WATCH VIDEO</a>
+			<a href="products.html" class="btn">PRODUCTS</a>
+		</div>
+		
+	</section>
+
+	<br>
+	<u>
+	<hr>
+	<hr>
+	<br>
+	<br>
+		<div class="whyus">
+			<div class="whyustopic">Why Us?</div>
+			<div class= "whyusdetails">
+				<div class="whyques"><b>Despite many other e-commerce websites for buying bonsai plants, why us?</b> </div><br>
+
+				<div class="whyanswer"><b>The answer is simple:</b></div><br>
+				
+				<div class="ansdesc">We are a highly rated e-commerce website in the web today, our costumers are well satisfied with our services and has positive review toward us. We are providing both instore and online store facilities with all day services available. We deliver the item within a day of delivery and safely to your destination. What makes us different than other? Most of the people nowadays complain that a lots of online platforms has now problem with online trancation and scalability. Most of the online platforms also dont offer you your data and privacy saftey so, in that aspect we are completely safe and this is what makes us different from others.
+				</div>
+
+			</div>
+			</div>
+		</div>
+
+	<table border="1px">
+		<tr>
+			<th class="delevery" width="500px"><img class="logo1" src="../images/fastdelivery.png" width=" 30px" height="auto">
+				<div style="font-size: 13px; text-align: center; font-family: Perpetua; color: #676C6C; text-decoration: none;">Delivery plants in your doorsteps.</div> 
+			</th>
+
+			<th class="online" width="500px"><img class="logo1" src="../images/esewa.png" width=" 30px" height="auto">
+				<div style="font-size: 13px; text-align: center; font-family: Perpetua; color: #676C6C; text-decoration: none;">We support online payment system</div>
+			</th>
+
+			<th class="call" width="500px"><img class="logo1" src="../images/call.png" width=" 30px" height="auto">
+				<div style="font-size: 13px; text-align: center; font-family: Perpetua; color: #676C6C; text-decoration: none;">We are in touch with you 8 to 8</div>
+			</th>
+		</tr>
+	</table>
+	
+	<h1 style="color: #8e5572; text-align: center; padding: 20px;">Our Best Sellings</h1>
+
+
+	
+
+	<div class="bestselling">
+
+		<div class="item-box">
+
+			<div class="best-image">
+				<div id="img">
+					<a href="#"><image><img src="../images/Chinese_elm.jpeg"><image></a>
+				</div>
+			</div>
+			<script>
+			    var images = ['../images/Chinese_elm.jpeg', '../images/Chinese_elm1.jpg'];
+
+			    var x = 0;
+			    var imgs = document.getElementById('img');
+			    //The setInterval() calls a function at theintervals (in milliseconds). 
+			    setInterval(slider, 2000);
+
+			    function slider() {
+
+			      if (x < images.length) 
+			        {
+			        x = x + 1;
+			        } 
+
+			      else 
+			        {
+			        x = 1;
+			        }
+
+
+			      imgs.innerHTML = "<img src=" + images[x - 1] + ">";
+			    }
+  			</script>
+
+			<div class="item-details">
+				<div class="star"><imaeg><img src="../images/starfull.png"><image></div>
+				<h4 style="font-size: 20px;text-align: center; text-decoration: underline;">Chinese elm</h4>
+
+					<div class="price"><span style="font-size: 30px;">Rs. 1700</span> <span style="text-decoration:line-through ; font-size: 25px; margin-left: 10px;">2500</span></div>
+					<br>
+
+					<div class="qnantity">
+						<form onsubmit="">
+						Quantity: 
+							<select name="group">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+							</select>
+							
+						</form><br><button class="listcart" onclick="cart()">Add to cart</button><br><br>
+					</div>
+					<div class="buynow">
+						<b style="background-color: red; float: left; font-size: 20px;">Buy Now</b>
+					</div>
+					<br><br>
+					<div class="description"><b>Description:</b><br>As a popular choice of bonsai, Chinese elm comes forward. It is good for keeping
+					indoor and outdoor both, which is a strong with lovey bark, petite leaves and fine-ramification looks.
+					It also looks like Japanese zelkova, making quite confusing. It is semi deciduous, which also depends
+					upon it's location. Love it, keep it, and care it.
+
+
+
+					</div>
+					<hr style="margin-top: 15px; height: 3px;"><br>
+
+			</div>
+
+		</div>
+
+
+		<div class="item-box">
+
+			<div class="best-image">
+				<div id="img1">
+					<a href="#"><image><img src="../images/Dwarf_boxwood.jpeg"><image></a>
+				</div>
+			</div>
+
+			<script>
+			    var images1 = ['../images/Dwarf_boxwood.jpeg', '../images/Dwarf_boxwood1.jpeg'];
+
+			    var y = 0;
+			    var imgs1 = document.getElementById('img1');
+			    //The setInterval() calls a function at theintervals (in milliseconds). 
+			    setInterval(slider1, 2000);
+
+			    function slider1() {
+
+			      if (y < images1.length) 
+			        {
+			        y = y + 1;
+			        } 
+
+			      else 
+			        {
+			        y = 1;
+			        }
+
+
+			      imgs1.innerHTML = "<img src=" + images1[y - 1] + ">";
+			    }
+  			</script>
+
+			<div class="item-details">
+				<div class="star"><image><img src="../images/starhalf.png"><image></div>
+				<h4 style="font-size: 20px;text-align: center; text-decoration: underline;">Dwarf boxwood</h4>
+
+					<div class="price"><span style="font-size: 30px;">Rs. 1965</span> <span style="text-decoration:line-through ; font-size: 25px; margin-left: 10px;">2140</span></div>
+					<br>
+
+					<div class="qnantity">
+						<form onsubmit="">
+						Quantity: 
+							<select name="group">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+							</select>
+							
+						</form><br><button class="listcart" onclick="cart()">Add to cart</button><br><br>
+					</div>
+					<div class="buynow">
+						<b style="background-color: red; float: left; font-size: 20px;">Buy Now</b>
+					</div>
+					<br><br>
+					<div class="description"><b>Description:</b><br>As a good bonsai subject, its tiny leathery leaves with rough bark and horizontal looks are 
+					major features. Its different varieties Japanese, Kingsville, Morris Midget etc. These plants 
+					are very hard, which can be kept either outdoor or indoor as per our desire. Its leaves can be
+					defoliated to make beautiful shape.
+
+
+
+					</div>
+					<hr style="margin-top: 15px; height: 3px;"><br>
+
+			</div>
+
+		</div>
+
+
+		<div class="item-box">
+
+			<div class="best-image">
+				<a href="#"><image><img src="../images/Japanese_maple.jpeg"><image></a>
+			</div>
+
+			<div class="item-details">
+				<div class="star"><img src="../images/starfull.png"></div>
+				<h4 style="font-size: 20px;text-align: center; text-decoration: underline;">Japanese maple</h4>
+
+					<div class="price"><span style="font-size: 30px;">Rs. 1895</span> <span style="text-decoration:line-through ; font-size: 25px; margin-left: 10px;">2100</span></div>
+					<br>
+
+					<div class="qnantity">
+						<form onsubmit="">
+						Quantity: 
+							<select name="group">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+							</select>
+							
+						</form><br><button class="listcart" onclick="cart()">Add to cart</button><br><br>
+					</div>
+					<div class="buynow">
+						<b style="background-color: red; float: left; font-size: 20px;">Buy Now</b>
+					</div>
+					<br><br>
+					<div class="description"><b>Description:</b><br>First, give a surprising wow for its beautiful colored appearance. It has palm-like
+					leaves with little saw-like structure. It appears intense green in summer, but on the arrival of autumn, 
+					its color changes to garnet tones. It should be protected from direct sunlight as the need cool and
+					humid climate. So, not good outdoor species during summer.
+
+
+
+					</div>
+					<hr style="margin-top: 15px; height: 3px;"><br>
+
+			</div>
+
+		</div>
+
+		<div class="item-box">
+
+			<div class="best-image">
+				<a href="#"><image><img src="../images/Juniper.jpg"><image></a>
+			</div>
+
+			<div class="item-details">
+				<div class="star"><img src="../images/starhalf.png"></div>
+				<h4 style="font-size: 20px;text-align: center; text-decoration: underline;">Juniper</h4>
+
+					<div class="price"><span style="font-size: 30px;">Rs. 2125</span> <span style="text-decoration:line-through ; font-size: 25px; margin-left: 10px;">2300</span></div>
+					<br>
+
+					<div class="qnantity">
+						<form onsubmit="">
+						Quantity: 
+							<select name="group">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+							</select>
+							
+						</form><br><button class="listcart" onclick="cart()">Add to cart</button><br><br>
+					</div>
+					<div class="buynow">
+						<b style="background-color: red; float: left; font-size: 20px;">Buy Now</b>
+					</div>
+					<br><br>
+					<div class="description"><b>Description:</b><br>An ever-green coniferous trees/shrub i.e. Juniper is very favored bonsai. Its foliage are
+					of two types: scale like and needle like. It is good for outdoor at bright location with lots of 
+					sunlight. Protect it from cold temperature. They are of various species like Chinese, Japanese, 
+					American, Rocky Mountain etc.
+
+
+
+					</div>
+					<hr style="margin-top: 15px; height: 3px;"><br>
+
+			</div>
+
+
+		</div>
+
+		
+
+	</div>
+
+	<footer class="footerhome">
+		<div class="row">
+			<div class="footer_column">
+				<h3>Our Shop</h3>
+				<ul>
+					<li><a href="#">Products</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Policies</a></li>
+					<li><a href="#">Awards</a></li>
+				</ul>
+			</div>
+
+			<div class="footer_column">
+				<h3>Contact Info</h3>
+				<ul style="color: blue;">
+					<li><b>Address:</b> <br> Bharatpur-7, Terhasaal chowk</li>
+					<li><b>Contact:</b> <br> +9779856374637</li>
+					<li><b>Email:</b> <br> bonsaiworld232@gmail.com</li>
+					<li><b>Working hours:</b> <br> 8:00 am to 8:00 pm (daily)</li>
+
+				</ul>
+			</div>
+
+			<div class="footer_column">
+				<h3>Our Categories</h3>
+				<ul>
+					<li><a href="#">hanging</a></li>
+					<li><a href="#">Ceramic</a></li>
+					<li><a href="#">Indoor</a></li>
+					<li><a href="#">Outdoor</a></li>
+				</ul>
+			</div>
+
+			<div class="footer_column">
+				<h3>FAQs Groups</h3>
+				<ul>
+					<li><a href="#">Delivery</a></li>
+					<li><a href="#">Payment</a></li>
+					<li><a href="#">Terms and Conditions</a></li>
+				</ul>
+			</div>
+
+
+			<div class="map">
+				<h3>Visit Us</h3>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.661955294281!2d84.40939793635027!3d27.66045007415548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3994fae5fd19bf4f%3A0x33c8b5ca50f03007!2zTUM2Nis4UDUsIOCkreCksOCkpOCkquClgeCksCA0NDIwMA!5e0!3m2!1sne!2snp!4v1672331993385!5m2!1sne!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+
+
+			<div class="footer_column">
+				<h3>Follow Us</h3>
+				<div class="social_follow" style="margin-top: 20px; ">
+					<a href="#"><img src="../images/facebook.png" width="30px" height="auto"></a>
+					<a href="#"><img src="../images/twitter.jpeg" width="30px" height="auto"></a>
+					<a href="#"><img src="../images/instagram.jpg" width="30px" height="auto"></a>
+					<a href="#"><img src="../images/linkedin.png" width="30px" height="auto"></a>
+					<a href="#"><img src="../images/youtube.png" width="30px" height="auto"></a>
+				</div>
+			</div>
+			<div class="app">
+				<h3>Download Our App</h3>
+				<img src="../images/qr.jpg" width="130px" height="auto">
+			</div>
+
+			<div class="signup">
+				<h3>Join With Us</h3>
+
+				<div class="email">
+					<form action="">
+					<label for="email"><b>Email:</b> </label>
+					<input type="email" placeholder="Enter your email address" name="emailadd">
+					<input type="submit" value="Sign up">
+					</form>
+				</div>	
+			</div>
+
+			
+
+
+
+
+		</div>
+	</footer>
+	<footer>
+		<div class="lastfooter">
+			<hr>
+			<span><center><b>Developed by:</b> <a href="aboutmesaksham.html">Saksham</a>|<a href="aboutmesandesh.html">Sandesh</a>|<a href="aboutmeaachal.html">Aachal</a>|<a href="aboutmekritagya.html">Kritagya</a></center></span>
+		</div>
+		<div class="copyright" style="text-align: right; font-size: 13px;">copyright &copy <b>BONSAI WORLD</b>||All Rights Reserved</div>
+	</footer>
+
+	
+
+</body>
+
+</html>

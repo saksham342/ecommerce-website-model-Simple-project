@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/home.css">
+	<style>
+		*{
+		    margin: 0px;
+		    padding: 0px;
+		    font-family: 'Century Gothic';
+		    text-decoration: none;
+		    list-style: none;
+		}
+		header{
+		     background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(../images/bonsainav.jpg);       /*background image and style*/
+		     height: 12vh;
+		    background-size: cover;
+		    background-position: center;
+		    opacity: 1;
+		     box-shadow: 0 0 11px 5px #182B19;
+		}
+		.aboutmain{
+		    display: flex;
+		     margin: 60px 100px 40px 100px;
+
+
+		}
+		.aboutleft{
+		    flex: 25%;
+		    background-color: #291438;
+		    margin: 0px 20px 40px 10px;
+		    display: flex;
+		    border-radius: 40px;
+		    box-shadow:  10px 1px 10px rgba(0, 0, 0, 0.5);
+
+
+		}
+		.aboutcontact, .certifications, .langexperience{
+		    display: flex;
+		    flex-direction: column;
+		    margin:20px 0px 0px 70px;
+		    justify-content: left;
+
+		}
+		.aboutright{
+		    flex: 75%;
+		    margin-left: 70px;
+		    margin-right: 70px;
+		    text-align: justify;
+		}
+
+		.aboutphoto img{
+		    width: 60%;
+		    height: auto;
+		    border-radius: 50%;
+		    margin-top: 10px;
+		    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
+		   margin-left: 20%;
+		}
+
+		.langdetails img{
+		    width: 100px;
+		    height: auto;
+		    margin: 10px 0px 0px 20px;
+		    position: relative;
+		    bottom: 30px;
+		    left: 50px;
+		}
+
+
+		.contacttitle,.certtitle,.langtitle{
+		    font-size: 20px;
+		    font-family: cursive;
+		    font-weight: 600;
+		    border:2px solid black;
+		    border-radius: 10px;
+		    margin-bottom: 4px;
+		    color: #FFF9CA; 
+		}
+		.contactdetails ul, .certdetails ul, .langdetails ul{
+		    color: white;
+		    margin:10px 0 20px 0;
+		}
+		 .certdetails ul{
+		    position: relative;
+		    left: 20%;
+		 }
+		.contactdetails ul li, .certdetails ul li{
+		    margin-bottom: 30px;
+		    font-size: 18px;
+		}
+
+		/*.fullname .nametext{
+		    text-align: center;
+		    font-size: 50px;
+		    font-family: monospace;
+		    font-weight: bold;
+		    box-shadow: 0px 5px 5px 5px rgba(111, 96, 255, 1);
+		    margin-bottom:20px;
+		}*/
+
+		.fullname .nametext img{
+		    width: 50%;
+		    box-shadow: 0px 5px 5px 5px rgba(111, 96, 255, 1);
+		    margin-bottom: 20px;
+		}
+
+		.introtext{
+		    font-size: 18px;
+		    margin-bottom: 40px;
+		    box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.5);
+		    padding: 10px;
+		    font-family: monospace;
+		}
+
+		.exptext, .educationtext{
+		    text-align: left;
+		    font-family: "Century Gothic";
+		    font-size: 23px;
+		    text-decoration: underline;
+		    margin-top: 70px;
+		    margin-bottom: 14px;
+		    font-weight: bold;
+		}
+
+		.explists li{
+		    font-size: 18px;
+		    padding: 10px;
+		    font-family: monospace;
+		}
+
+
+		.edulist li{
+		     font-size: 18px;
+		    padding: 10px;
+		    font-family: monospace;
+		    font-weight: bold;
+		    background-color: rgba(41, 20, 56, 0.4);
+		    border-radius: 20%;
+		}
+		/*media tags*/
+
+
+	@media(max-width:1300px){           /*media tag for signup bar*/
+	      .signup{
+	        margin: 50px 0px 0px 60px;
+	    }
+	    }
+	     @media(max-width:670px){  
+	     .signup{
+	        margin: 50px 0px 0px 60px;
+	    }     
+	    }
+
+
+	    @media(max-width:670px){        /*media tag for navigation bar*/
+	    
+	    nav ul{ 
+	        width: 100%;
+	        
+	        flex-direction: column;
+	        text-align: center;
+	        background-color: black;
+	        opacity: 0.5;
+	        
+	    }
+	    .nav_bar ul li{
+	        padding: 15px;
+	    
+	    }
+	    .nav_bar ul li a{
+	        margin-right: 0px;
+	    }
+	    .logo a img{
+	        width: 100px;
+	    }
+
+	    header{
+	     background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(../images/bonsainav.jpg);       /*background image and style*/
+	     height: 60vh;
+	     }
+	     .aboutmain{
+	        margin-top: 100px;
+	     }
+	     .aboutmain{
+	        flex-direction: column;
+	        margin: 60px 10px 40px 10px;
+	     }
+	     .edulist{
+	        flex-direction: column;
+	     }
+	     .aboutright{
+	      margin-left: 7px;
+	      margin-right: 7px;
+	  }
+
+	}
+	</style>
+	<title>
+		Saksham Baral
+	</title>
+</head>
+<body>
+	 <header>
+        <div class="main">
+
+            <label class="logo"><a href="Home.html"><img src="../images/logo.png">
+            </label>
+
+            <nav class="nav_bar">
+                        
+            <ul>
+                <li class="active1"> <a href="Home.html">Home</a></li>
+                <li class="active2"><a href="Blogs.html">Blogs</a></li>
+                <li class="active3"><a href="Products.html">Products</a></li>
+                <li class="active3"><a href="Research.html">Research</a></li>               
+                <li class="active4"><a href="aboutus.html">About Us</a></li>
+            </ul>
+            </nav>
+
+        </div>
+    </header>
+
+<div class="aboutmain">
+	<div class="aboutleft">
+		<div class="leftdetails">
+			<div class="aboutphoto">
+				<img src="../images/saksham.jpg">
+			</div>
+			<div class="aboutcontact"><br><br>
+				<div class="contacttitle">CONTACT</div><hr style="height: 1px; width: 200px;border: 2px solid black;">
+			<div class="contactdetails">
+				<ul>
+					<li>Email: <span style="font-size: 15px; text-decoration: underline;">saksham324323@gmail.com</span></li>
+					<li>Phone: <span style="font-size: 15px; text-decoration: underline;">+9779845678940</span></li>
+					<li>Address: <span style="font-size: 15px; text-decoration: underline;">KTM-4, Chabahil</span></li>
+				</ul>
+				<div class="socialmedias" style="margin-top: 20px; margin-left: 5px; ">
+					<a href="#"><img src="../images/facebook.png" width="30px" height="auto"></a>
+					<a href="#"><img src="../images/twitter.jpeg" width="30px" height="auto"></a>
+					<a href="#"><img src="../images/instagram.jpg" width="30px" height="auto"></a>
+					<a href="#"><img src="../images/linkedin.png" width="30px" height="auto"></a>
+					<a href="#"><img src="../images/youtube.png" width="30px" height="auto"></a>
+				</div>
+			</div>
+			</div>
+			<div class="certifications">
+				<div class="certtitle">CERTIFICATIONS</div><hr style="height: 1px; width: 200px;border: 2px solid black;">
+				<div class="certdetails">
+					<ul>
+						<li>CCNA</li>
+						<li>OSCP</li>
+						<li>CEH</li>
+						<li>CISM</li>
+					</ul>
+				</div>
+			</div>
+			<div class="langexperience">
+				<div class="langtitle">CODING SKILLS</div><hr style="height: 1px; width: 200px;border: 2px solid black;">
+				<div class="langdetails">
+					<ul>
+						<li>Python</li><img src="../images/star4.png"><br>
+						<li>Java</li><img src="../images/starhalf.png"><br>
+						<li>HTML </li><img src="../images/starfull.png"><br>
+						<li>CSS </li><img src="../images/starhalf.png"><br>
+						<li>J.S. </li><img src="../images/starfull.png"><br>
+						<li>PHP </li><img src="../images/star4.png"><br>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="aboutright">
+		<div class="rightdetails">
+			<div class="fullname">
+				<div class="nametext"><center><img src="../images/namesaksham.png"></center></div>
+			</div>
+			<div class="aboutintro">
+				<span style="font-weight: bold; font-size: 20px;"><center>Network Manager, Web developer and Cyber Security Expert</center></span><br><br><hr style="border-top: 3px dotted black;"><hr style="border-top: 3px dotted black;"><br><br>
+				<div class="introtext">Welcome to my profile! I am a highly skilled and experienced professional with certifications in multiple IT fields. As a cyber security expert, I have strong knowledge about different security measures of latest attacks. Also, I have worked in different countries and advanced companies. 
+				 I also have a strong knowledge in network administration, with experience in configuring and managing networks of all sizes. Additionally, 
+				 I am a proficient drone engineer, able to design and develop varieties of drones. And as a full-stack web developer, I have the skills to design, develop, and maintain complex web applications, using various technologies and frameworks.
+			
+			</div>
+			</div>
+			<div class="experience">
+				<div class="exptext">EXPERIENCES</div>
+
+				<div class="explists">
+					<ul>
+						<li>Cyber Security Expert: I have worked for a long time as a penetration tester and incident responder in the top countries and top industries. I also got the reward for hunting bugs of systems of many companies. 
+						</li>
+						<li>Network Administrator:Experience in designing, implementing and maintaning network infrastructres.
+                            Experienced in router switching, Proper knowledge of different protocols and worked with various network management tools.
+						</li>
+						<li>Drone Engineer:Experience in designing and developing drone systems of various sizes. 
+                            Experience in programming drone control systems using languages such as C++ and Python.
+                            Experience in working with various sensors and wireless systems for drone.
+						</li>
+						<li>Full-stack Web Developer:Bold experience in developing and designing of different types of complex websites. 4.9 star knowledge in technologies like HTML, CSS, and JS. Advanced knowledge about managing databases. 
+						</li>
+					</ul>
+				</div>
+			</div><hr style="border-top: 3px dotted black;">
+			<div class="education"></div>
+			<div class="educationtext">EDUCATION</div>
+			<div class="edulist" style="display: flex;">
+				<div style="flex: 50%;">
+					<li>SEE:<br><span style="font-size:15px; font-weight: none;">--DKS Model Academy<br>--Biratnagar-7, Morang<br>--GPA: 4.00<br>--April 2019 to April 2020</span></li>
+
+					<li>+2 Science Stream:<br><span style="font-size:15px; font-weight: none;">--National College of Science and Technology<br>--Biratnagar-7, Morang<br>--GPA: 3.95<br>--April 2020 to April 2022</span></li>
+				</div>
+
+				<div style="flex:50%;">
+
+					<li>Bachelor:<span style="font-size:15px; font-weight: none;">Networking and Cyber Security<br>--Islington College<br>--Kamalpokhari, Kathmandu<br>--Certificate: fisrt honors<br>--July 2022 to August 2025</span></li>
+
+					<li>Masters:<span style="font-size:15px; font-weight: none;">IT and Applied Security<br>--Islington College<br>--Kamalpokhari, Kathmandu<br>--Certificate: fisrt honors<br>--September 2025 to December 2027</span></li>
+				</div>
+
+				
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+	<footer class="footerhome">
+        <div class="row">
+            <div class="footer_column">
+                <h3>Our Shop</h3>
+                <ul>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Policies</a></li>
+                    <li><a href="#">Awards</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_column">
+                <h3>Contact Info</h3>
+                <ul style="color: blue;">
+                    <li><b>Address:</b> <br> Bharatpur-7, Terhasaal chowk</li>
+                    <li><b>Contact:</b> <br> +9779856374637</li>
+                    <li><b>Email:</b> <br> bonsaiworld232@gmail.com</li>
+                    <li><b>Working hours:</b> <br> 8:00 am to 8:00 pm (daily)</li>
+
+                </ul>
+            </div>
+
+            <div class="footer_column">
+                <h3>Our Categories</h3>
+                <ul>
+                    <li><a href="#">hanging</a></li>
+                    <li><a href="#">Ceramic</a></li>
+                    <li><a href="#">Indoor</a></li>
+                    <li><a href="#">Outdoor</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_column">
+                <h3>FAQs Groups</h3>
+                <ul>
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">Payment</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                </ul>
+            </div>
+
+
+            <div class="map">
+                <h3>Visit Us</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.661955294281!2d84.40939793635027!3d27.66045007415548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3994fae5fd19bf4f%3A0x33c8b5ca50f03007!2zTUM2Nis4UDUsIOCkreCksOCkpOCkquClgeCksCA0NDIwMA!5e0!3m2!1sne!2snp!4v1672331993385!5m2!1sne!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+
+            <div class="footer_column">
+                <h3>Follow Us</h3>
+                <div class="social_follow" style="margin-top: 20px; ">
+                    <a href="#"><img src="../images/facebook.png" width="30px" height="auto"></a>
+                    <a href="#"><img src="../images/twitter.jpeg" width="30px" height="auto"></a>
+                    <a href="#"><img src="../images/instagram.jpg" width="30px" height="auto"></a>
+                    <a href="#"><img src="../images/linkedin.png" width="30px" height="auto"></a>
+                    <a href="#"><img src="../images/youtube.png" width="30px" height="auto"></a>
+                </div>
+            </div>
+            <div class="app">
+                <h3>Download Our App</h3>
+                <img src="../images/qr.jpg" width="130px" height="auto">
+            </div>
+
+            <div class="signup">
+                <h3>Join With Us</h3>
+
+                <div class="email">
+                    <form action="">
+                    <label for="email"><b>Email:</b> </label>
+                    <input type="email" placeholder="Enter your email address" name="emailadd">
+                    <input type="submit" value="Sign up">
+                </div>  
+            </div>
+
+            
+
+
+
+
+        </div>
+    </footer>
+
+    
+        <div class="lastfooter">
+            <hr>
+			<span><center><b>Developed by:</b> <a href="aboutmesaksham.html">Saksham</a>|<a href="aboutmesandesh.html">Sandesh</a>|<a href="aboutmeaachal.html">Aachal</a>|<a href="aboutmekritagya.html">Kritagya</a></center></span>
+        </div>
+        <div class="copyright" style="text-align: right; font-size: 13px;">copyright &copy <b>BONSAI WORLD</b>||All Rights Reserved</div>
+    </footer>
+</html>

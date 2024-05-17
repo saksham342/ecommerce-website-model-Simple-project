@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bonsai</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <script src="../javascript/script.js"></script> 
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          font-family: "Century Gothic";
+          text-decoration: none;
+        }
+
+        header {
+          background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(../images/bonsainav.jpg);       /*background image and style*/
+          height: 12vh;
+          background-size: cover;
+          background-position: center;
+          opacity: 1;
+          box-shadow: 0 0 11px 5px #182B19;
+        }
+        .searchbar form{
+          width: 200px;
+        }
+        .searchbar img{
+          width: 30px;
+          height: auto;
+          margin: 20px 0px 0px 0px;
+        }
+
+        .category {
+          display: block;
+
+        }
+        .category button {
+          margin-left: 50px;
+          width: 100px;
+          height: 50px;
+          border-radius: 20%;
+          margin-bottom: 10px;
+          background-color: aqua;
+          cursor: pointer;
+          color: red;
+          font-size: 17px;
+
+        }
+        .category button:hover{
+          color: black;
+          background-color: #f7a440;
+        }
+        .All {
+          display: flex;
+        }
+        /* Container */
+        .container {
+          display: grid;
+          align-items: center;
+          grid-template-columns: 1fr 1fr 1fr;
+          column-gap: 5px;
+          margin-left: 20%;
+        }
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+
+        .text {
+          max-width: 100%;
+          margin-left: 5px;
+        }
+
+        /* Description */
+        .container .text div {
+          text-align: justify;
+        }
+        .plantname {
+          font-weight: bold;
+          font-size: 30px;
+        }
+        .price {
+          font-weight: bold;
+          font-size: 20px;
+          color: black;
+          margin-top: 10px;
+        }
+        .delivery {
+          font-size: 20px;
+          color: rgb(231, 126, 126);
+        }
+
+        /* Add to cart  */
+        .container .text button {
+          border: 2px solid #e1701a;
+          background: #f7a440;
+          color: white;
+          font-weight: bold;
+          margin: 20px;
+          padding: 5px 10px;
+        }
+        .container .text button:hover {
+          box-shadow: 0 0 5px 5px #e1701a inset;
+          cursor: pointer;
+        }
+
+        /*media tags*/
+
+        @media (max-width: 670px) {
+          /*media tag for middle title,buttons and logo*/
+          .title h1 {
+            font-size: 20px;
+          }
+          .button .btn {
+            font-size: 12px;
+            padding: 0px;
+            margin-top: -30px;
+          }
+        }
+
+        @media (max-width: 670px) {
+          /*media tag for navigation bar*/
+
+          nav ul {
+            width: 100%;
+
+            flex-direction: column;
+            text-align: center;
+            background-color: black;
+            opacity: 0.5;
+          }
+          .nav_bar ul li {
+            padding: 15px;
+          }
+          .nav_bar ul li a {
+            margin-right: 0px;
+          }
+          .logo a img {
+            width: 100px;
+          }
+           header{
+             background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(../images/bonsainav.jpg);       /*background image and style*/
+             height: 60vh;
+         }
+        }
+
+
+        @media (max-width: 670px) {
+          /*media tag for signup footer*/
+          .signup {
+            margin: 50px 0px 0px 60px;
+          }
+        }
+        @media (max-width: 900px) {
+
+          .container {
+          display: inline-block;
+          align-items: center;
+          grid-template-columns: 1fr 1fr 1fr;
+          column-gap: 5px;
+          margin-left: 20%;
+        }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="main">
+
+            <label class="logo"><a href="Home.html"><img src="../images/logo.png">
+            </label>
+
+            <nav class="nav_bar">
+
+                <ul>
+                    <li class="active1"> <a href="Home.html">Home</a></li>
+                    <li class="active2"><a href="Blogs.html">Blogs</a></li>
+                    <li class="active3"><a href="Products.html">Products</a></li>
+                    <li class="active3"><a href="Research.html">Research</a></li>
+                    <li class="active4"><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <br>
+    <a name="top"></a>
+    
+    <div class="image-scroll">
+
+    </div>
+    <br><br><br><br>
+    <div class="All">
+        <div class="category">
+            <button onclick="allproducts()">All Products</button>
+            <button onclick="discount()">High discount</button>
+            <button onclick="best()">Best Selling</button>
+            <button onclick="newproducts()">New Arrival</button>
+            <button onclick="today()">Today's Special</button>
+
+        </div>
+        <div class="body">
+
+            <div class="container" id="1">
+                <div class="image">
+                    <img src="../images/Medium Rock Juniper.webp" alt="">
+                </div>
+
+                <div class="text">
+                    <p>
+                        <span class="plantname">Medium Rock Juniper</span>
+                    <div>
+                        <i>Junipers</i> are coniferous trees and shrubs in the genus Juniperus of the cypress
+                        family Cupressaceae. Depending on the taxonomy, between 50 and 67 species of junipers are widely
+                        distributed throughout the Northern Hemisphere, from the Arctic, south to tropical Africa,
+                        throughout parts of western, central and southern Asia, east to eastern Tibet in the Old World,
+                        and
+                        in the mountains of Central America. The highest-known juniper forest occurs at an altitude of
+                        4,900
+                        metres (16,100 ft) in southeastern Tibet and the northern Himalayas, creating one of the highest
+                        tree lines on earth.
+                    </div>
+                    <p class="price">Rs.1549</p>
+                    <p class="delivery">Delivery: Within 24 hr</p> <br><br>
+                    <div class="qnantity">
+                        <form onsubmit="">
+                            Quantity:
+                            <select name="group">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </form>
+                    </div>
+                    <button onclick="cart()">Add to cart</button></p>
+                </div>
+            </div>
+            <div class="container" id="2">
+                <div class="image">
+                    <img src="../images/chinese elim.webp" alt="">
+                </div>
+                
+                <div class="text">
+                    <p>
+                        <span class="plantname">Chinese Elm</span>
+                    <div>
+                        As a popular choice of bonsai, <i>Chinese elm</i> comes forward. It is good for keeping
+					indoor and outdoor both, which is a strong with lovey bark, petite leaves and fine-ramification looks.
+					It also looks like Japanese zelkova, making quite confusing. It is semi deciduous, which also depends
+					upon it's location. Love it, keep it, and care it.
+                    </div>
+                    <p class="price">Rs.1700 <span style="text-decoration:line-through; font-size: 17px;margin-left: 10px;">2500</span></p>
+                    <p class="delivery">Delivery: Within 2 days</p> <br><br>
+                    <div class="qnantity">
+                        <form onsubmit="">
+                            Quantity:
+                            <select name="group">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </form>
+                    </div>
+                    <button onclick="cart()">Add to cart</button>
+                    </p>
+                </div>
+            </div>
+            <div class="container" id="3">
+                <div class="image">
+                    <img src="../images/Cotoneaster Bonsai.webp" alt="">
+                </div>
+
+                <div class="text">
+                    <p>
+                        <span class="plantname">Cotoneaster Bonsai</span>
+                    <div>
+                        Cotoneasters are very popular garden shrubs, grown for their attractive habit and decorative
+                        fruit.Many species have escaped from cultivation and become invasive weeds where climatic
+                        conditions
+                        are suitable for them, such as the many Chinese species naturalised in northwestern
+                        Europe.Cotoneaster species are used as larval food plants by some Lepidoptera species including
+                        grey
+                        dagger, mottled umber, short-cloaked moth, winter moth, and hawthorn moth. The flowers attract
+                        bees
+                        and butterflies and the fruits are eaten by birds.
+                    </div>
+                    <p class="price">Rs.1499</p>
+                    <p class="delivery">Delivery: Within 24 hr</p> <br><br>
+                    <div class="qnantity">
+                        <form onsubmit="">
+                            Quantity:
+                            <select name="group">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </form>
+                    </div>
+                    <button onclick="cart()">Add to cart</button>
+                    </p>
+                </div>
+            </div>
+            <div class="container" id="4">
+                <div class="image">
+                    <img src="../images/Grand Chinese Elm Bonsai.webp" alt="">
+                </div>
+
+                <div class="text">
+                    <p>
+                        <span class="plantname">Grand Chinese Elm Bonsai</span>
+                    <div>
+                        This plant is good for beginner and intermediate. It is beautiful and attractive. As per report of our business, It is the plant which is best according to customers. Love it and care
+                        it. Best for indoor and outdoor. 
+                    </div>
+                    <p class="price">Rs.970 <span style="text-decoration:line-through; font-size: 17px;margin-left: 10px;">1700</span></p>
+                    <p class="delivery">Delivery: Within 24 hr</p> <br><br>
+                    <div class="qnantity">
+                        <form onsubmit="">
+                            Quantity:
+                            <select name="group">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </form>
+                    </div>
+                    <button onclick="cart()">Add to cart</button></p>
+                </div>
+            </div>
+            <div class="container" id="5">
+                <div class="image">
+                    <img src="../images/Juniper.jpg" alt="">
+                </div>
+
+                <div class="text">
+                    <p>
+                        <span class="plantname">Juniper</span>
+                    <div>
+                        An ever-green coniferous trees/shrub i.e. Juniper is very favored bonsai. Its foliage are of two types: scale like and needle like. It is good for outdoor at bright location
+                         with lots of sunlight. Protect it from cold temperature. They are of various species like Chinese, Japanese, American, Rocky Mountain etc.
+                    </div>
+                    <p class="price">Rs.2125 <span style="text-decoration:line-through; font-size: 17px;margin-left: 10px;">2300</span></p>
+                    <p class="delivery">Delivery: Within 24 hr</p> <br><br>
+                    <div class="qnantity">
+                        <form onsubmit="">
+                            Quantity:
+                            <select name="group">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </form>
+                    </div>
+                    <button onclick="cart()">Add to cart</button></p>
+                </div>
+            </div>
+            <div class="container" id="6">
+                <div class="image">
+                    <img src="../images/Holly Goshiki (Osmanthus).webp" alt="">
+                </div>
+
+                <div class="text">
+                    <p>
+                        <span class="plantname">Holly Goshiki (Osmanthus)</span>
+                    <div>
+                        It is an evergreen shrub or small tree growing to 2–8 m (7–26 ft) tall. The bark is brown to
+                        grey or
+                        blackish, cracking into small plates on old plants. The leaves are opposite, 3–7 cm long and
+                        1.5–4
+                        cm broad with a thick, leathery texture, lustrous dark green above, paler yellow-green below;
+                        the
+                        margin is entire or with one to four large spine-tipped teeth on each side.It is widely used as
+                        a
+                        hedge plant.
+                    </div>
+                    <p class="price">Rs.1000 <span style="text-decoration:line-through; font-size: 17px;margin-left: 10px;">2100</span></p>
+                    <p class="delivery">Delivery: Within 2 days</p> <br><br>
+                    <div class="qnantity">
+                        <form onsubmit="">
+                            Quantity:
+                            <select name="group">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </form>
+                    </div>
+                    <button onclick="cart()">Add to cart</button></p>
+                </div>
+            </div>
+            <div class="container" id="7">
+                <div class="image">
+                    <img src="../images/jade bonsai.webp" alt="">
+                </div>
+
+                <div class="text">
+                    <p>
+                        <span class="plantname">Jade Bonsai</span>
+                    <div>
+                        <i>ovata</i> , commonly known as jade plant, lucky plant, money plant or money tree, is a
+                        succulent
+                        plant with small pink or white flowers that is native to the KwaZulu-Natal and Eastern Cape
+                        provinces of South Africa, and Mozambique; it is common as a houseplant worldwide.[2] Much of
+                        its
+                        popularity stems from the low levels of care needed; the jade plant requires little water and
+                        can
+                        survive in most indoor conditions. It is sometimes referred to as the money tree; however,
+                        Pachira
+                        aquatica also has this nickname
+                    </div>
+                    <p class="price">Rs.1449</p>
+                    <p class="delivery">Delivery: Within 2 days</p> <br><br>
+                    <div class="qnantity">
+                        <form onsubmit="">
+                            Quantity:
+                            <select name="group">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </form>
+                    </div>
+                    <button onclick="cart()">Add to cart</button></p>
+                </div>
+            </div>
+            <div class="container" id="8">
+                <div class="image">
+                    <img src="../images/Large Flowering Tea Tree (Fukien Tea).webp" alt="">
+                </div>
+
+                <div class="text">
+                    <p>
+                        <span class="plantname">Large Flowering Tea Tree (Fukien Tea)</span>
+                    <div>
+                        <i>Carmona retusa</i> (Fukien tea tree) is used in bonsai because of its ability to develop a
+                        thick
+                        and
+                        interesting trunk, small white flowers that bloom almost year-round, and tiny round green, red,
+                        or
+                        black fruits. The lobed leaves are shiny dark green and maintain their small size
+                    </div>
+                    <p class="price">Rs.999</p>
+                    <p class="delivery">Delivery: Within 2 days</p> <br><br>
+                    <div class="qnantity">
+                        <form onsubmit="">
+                            Quantity:
+                            <select name="group">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </form>
+                    </div>
+                    <button onclick="cart()">Add to cart</button></p>
+                </div>
+            </div>
+            <div class="container" id="9">
+                <div class="image">
+                    <img src="../images/Limited Pot_ Chinese Elm.webp" alt="">
+                </div>
+
+                <div class="text">
+                    <p>
+                        <span class="plantname">Limited Pot_ Chinese Elm</span>
+                    <div>
+                        The genus is hermaphroditic, having apetalous perfect flowers which are wind-pollinated. Elm
+                        leaves
+                        are alternate, with simple, single- or, most commonly, doubly serrate margins, usually
+                        asymmetric at
+                        the base and acuminate at the apex. The fruit is a round wind-dispersed samara flushed with
+                        chlorophyll, facilitating photosynthesis before the leaves emerge. The samarae are very light,
+                        those of British elms numbering around 50,000 to the pound.<i>Elm</i> propagation methods vary
+                        according to
+                        elm type and location, and the plantsman's needs. Native species may be propagated by seed. In
+                        their
+                        natural setting, native species, such as wych elm and European white elm in central and northern
+                        Europe and field elm in southern Europe, set viable seed in "favourable" seasons.
+                    </div>
+                    <p class="price">Rs.1365<span style="text-decoration:line-through; font-size: 17px;margin-left: 10px;">2020</span></p>
+                    <p class="delivery">Delivery: Within 24 hr</p> <br><br>
+                    <div class="qnantity">
+                        <form onsubmit="">
+                            Quantity:
+                            <select name="group">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </form>
+                    </div>
+                    <button onclick="cart()">Add to cart</button></p>
+                </div>
+            </div>
+            <div class="container" id="10">
+                <div class="image">
+                    <img src="../images/Dwarf_boxwood.jpeg" alt="">
+                </div>
+
+                <div class="text">
+                    <p>
+                        <span class="plantname">Dwarf Boxwood</span>
+                    <div>
+                        As a good bonsai subject, its tiny leathery leaves with rough bark and horizontal looks are 
+					major features. Its different varieties Japanese, Kingsville, Morris Midget etc. These plants 
+					are very hard, which can be kept either outdoor or indoor as per our desire. Its leaves can be
+					defoliated to make beautiful shape.
+                    </div>
+                    <p class="price">Rs.1965 <span style="text-decoration:line-through; font-size: 17px;margin-left: 10px;">2140</span></p>
+                    <p class="delivery">Delivery: Within 24 hr</p> <br><br>
+                    <div class="qnantity">
+                        <form onsubmit="">
+                            Quantity:
+                            <select name="group">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </form>
+                    </div>
+                    <button onclick="cart()">Add to cart</button>
+                    </p>
+                </div>
+            </div>
+            <div class="container" id="11">
+                <div class="image">
+                    <img src="../images/Miniature Little Ollie Olive Bonsai.webp" alt="">
+                </div>
+
+                <div class="text">
+                    <p>
+                        <span class="plantname">Miniature Little Ollie Olive Bonsai</span>
+                    <div>
+                        The Little Ollie Olive is a popular variety of bonsai due to its long and bright green foliage.
+                        Easy
+                        to care for as it enjoys direct natural sunlight and moderate watering.Bonsai shape may vary
+                        from
+                        shown. Care information included. Bonsai pot may vary depending on availability.Little Ollie
+                        Dwarf
+                        Olive does produce inconspicuous flowers, but rarely sets any fruit. This mess-free ornamental
+                        choice can be used near sidewalks and patios without fear of damage from reflected heat.
+
+                    </div>
+                    <p class="price">Rs.1199</p>
+                    <p class="delivery">Delivery: Within 2 days</p> <br><br>
+                    <div class="qnantity">
+                        <form onsubmit="">
+                            Quantity:
+                            <select name="group">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </form>
+                    </div>
+                    <button onclick="cart()">Add to cart</button></p>
+                </div>
+            </div>
+            <div class="container" id="12">
+                <div class="image">
+                    <img src="../images/Miniature Yaupon Holly.jpg" alt="">
+                </div>
+
+                <div class="text">
+                    <p>
+                        <span class="plantname">Miniature Yaupon Holly</span>
+                    <div>
+                        <i>Ilex vomitoria</i>, commonly known as yaupon or yaupon holly, is a species of holly that is
+                        native to southeastern North America.[2] The word yaupon was derived from the Catawban yą́pą,
+                        from
+                        yą- tree + pą leaf. Another common name, cassina, was borrowed from Timucua
+                    </div>
+                    <p class="price">Rs.1399</p>
+                    <p class="delivery">Delivery: Within 2 days</p> <br><br>
+                    <div class="qnantity">
+                        <form onsubmit="">
+                            Quantity:
+                            <select name="group">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </form>
+                    </div>
+                    <button onclick="cart()">Add to cart</button></p>
+                </div>
+            </div>
+            <div class="container" id="13">
+                <div class="image">
+                    <img src="../images/Natal Plum.webp" alt="">
+                </div>
+
+                <div class="text">
+                    <p>
+                        <span class="plantname">Natal Plum</span>
+                    <div>
+                        <i>Carissa macrocarpa</i> is a shrub native to tropical and southern Africa. It is commonly
+                        known as
+                        the
+                        Natal plum and, in South Africa, the large num-num. In Zulu, as well as in the Bantu tribes of
+                        Uganda, it is called Amathungulu or umThungulu oBomvu. In Afrikaans the fruit is called
+                        noem-noem.
+                    </div>
+                    <p class="price">Rs.1800 <span style="text-decoration:line-through; font-size: 17px;margin-left: 10px;">2910</span></p>
+                    <p class="delivery">Delivery: Within 24 hr</p> <br><br>
+                    <div class="qnantity">
+                        <form onsubmit="">
+                            Quantity:
+                            <select name="group">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </form>
+                    </div>
+                    <button onclick="cart()">Add to cart</button></p>
+                </div>
+            </div>
+            <div class="container" id="14">
+                <div class="image">
+                    <img src="../images/Satsuki Azalea - Purple.webp" alt="">
+                </div>
+
+                <div class="text">
+                    <p>
+                        <span class="plantname">Satsuki Azalea - Purple</span>
+                    <div>
+                        <i>Satsuki azalea</i> is a cultivar group of the species Rhododendron indicum, a type of azalea
+                        extensively
+                        cultivated and hybridized by the Japanese. It is native to the mountains of Japan.
+
+                        <i>Satsuki azalea</i> have a diverse range of flower forms and color patterns with multiple
+                        patterns
+                        often
+                        appearing on a single plant. Satsuki bloom from May to June; the name “Satsuki” in Japanese is
+                        reference to their blooming period, the fifth month of the Asian lunar calendar. They are
+                        commonly
+                        used as a subject in bonsai and many bonsai enthusiasts and shows are dedicated solely to them.
+                        There are thousands of different varieties.
+                    </div>
+                    <p class="price">Rs.1299</p>
+                    <p class="delivery">Delivery: Within 24 hr</p> <br><br>
+                    <div class="qnantity">
+                        <form onsubmit="">
+                            Quantity:
+                            <select name="group">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </form>
+                    </div>
+                    <button onclick="cart()">Add to cart</button></p>
+                </div>
+            </div>
+            <div class="container" id="15">
+                <div class="image">
+                    <img src="../images/Trained Juniper Bonsai.webp" alt="">
+                </div>
+
+                <div class="text">
+                    <p>
+                        <span class="plantname">Trained Juniper Bonsai</span>
+                    <div>
+                        <i>Junipers</i> are coniferous trees and shrubs in the genus Juniperus of the cypress
+                        family Cupressaceae. Depending on the taxonomy, between 50 and 67 species of junipers are widely
+                        distributed throughout the Northern Hemisphere, from the Arctic, south to tropical Africa,
+                        throughout parts of western, central and southern Asia, east to eastern Tibet in the Old World,
+                        and
+                        in the mountains of Central America. The highest-known juniper forest occurs at an altitude of
+                        4,900
+                        metres (16,100 ft) in southeastern Tibet and the northern Himalayas, creating one of the highest
+                        tree lines on earth.
+                    </div>
+                    <p class="price">Rs.1349</p>
+                    <p class="delivery">Delivery: Within 24 hr</p> <br><br>
+                    <div class="qnantity">
+                        <form onsubmit="">
+                            Quantity:
+                            <select name="group">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </form>
+                    </div>
+
+                    <button onclick="cart()">Add to cart</button></p>
+                </div>
+            </div>
+
+
+            <div class="container" id="16">
+                <div class="image">
+                    <img src="../images/Japanese_maple.jpeg" alt="">
+                </div>
+
+                <div class="text">
+                    <p>
+                        <span class="plantname">Japanese_maple</span>
+                    <div>
+                        First, give a surprising wow for its beautiful colored appearance. It has palm-like
+					leaves with little saw-like structure. It appears intense green in summer, but on the arrival of autumn, 
+					its color changes to garnet tones. It should be protected from direct sunlight as the need cool and
+					humid climate. So, not good outdoor species during summer.
+                    </div>
+                    <p class="price">Rs.1965 <span style="text-decoration:line-through; font-size: 17px;margin-left: 10px;">2140</span></p>
+                    <p class="delivery">Delivery: Within 24 hr</p> <br><br>
+                    <div class="qnantity">
+                        <form onsubmit="">
+                            Quantity:
+                            <select name="group">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </form>
+                    </div>
+
+                    <button onclick="cart()">Add to cart</button></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <a href="#top" style="margin:50px;padding: 4px;color: black;background-color: gray; border-radius: 20%;">Go to top</a>
+    <script>
+        
+        var a= document.getElementById('1') ; 
+        var b= document.getElementById('2') ;
+        var c= document.getElementById('3') ;
+        var d= document.getElementById('4') ;
+        var e= document.getElementById('5') ;
+        var f= document.getElementById('6') ;
+        var g= document.getElementById('7') ;
+        var h= document.getElementById('8') ;
+        var i= document.getElementById('9') ;
+        var j= document.getElementById('10') ;
+        var k= document.getElementById('11') ;
+        var l= document.getElementById('12') ;
+        var m= document.getElementById('13') ;
+        var n= document.getElementById('14') ;
+        var o= document.getElementById('15') ;
+        var p= document.getElementById('16') ;
+
+       
+
+        function discount(){
+            a.style.display='none';
+            b.style.display='none';
+            c.style.display='none';
+            d.style.display='grid';
+            e.style.display='none';
+            f.style.display='grid';
+            g.style.display='none';
+            h.style.display='none';
+            i.style.display='grid';
+            j.style.display='none';
+            k.style.display='none';
+            l.style.display='none';
+            m.style.display='grid';
+            n.style.display='none';
+            o.style.display='none';
+            p.style.display='none';
+        }
+        function allproducts(){
+            a.style.display='grid';
+            b.style.display='grid';
+            c.style.display='grid';
+            d.style.display='grid';
+            e.style.display='grid';
+            f.style.display='grid';
+            g.style.display='grid';
+            h.style.display='grid';
+            i.style.display='grid';
+            j.style.display='grid';
+            k.style.display='grid';
+            l.style.display='grid';
+            m.style.display='grid';
+            n.style.display='grid';
+            o.style.display='grid';
+            p.style.display='grid';
+            
+        }
+
+        function best(){
+            a.style.display='none';
+            b.style.display='grid';
+            c.style.display='none';
+            d.style.display='none';
+            e.style.display='grid';
+            f.style.display='none';
+            g.style.display='none';
+            h.style.display='none';
+            i.style.display='none';
+            j.style.display='grid';
+            k.style.display='none';
+            l.style.display='none';
+            m.style.display='none';
+            n.style.display='none';
+            o.style.display='none';
+            p.style.display='grid';
+        }
+
+        function newproducts(){
+            a.style.display='grid';
+            b.style.display='none';
+            c.style.display='none';
+            d.style.display='none';
+            e.style.display='none';
+            f.style.display='none';
+            g.style.display='none';
+            h.style.display='none';
+            i.style.display='none';
+            j.style.display='none';
+            k.style.display='grid';
+            l.style.display='grid';
+            m.style.display='none';
+            n.style.display='grid';
+            o.style.display='grid';
+            p.style.display='none';
+        }
+
+        function today(){
+            a.style.display='none';
+            b.style.display='none';
+            c.style.display='grid';
+            d.style.display='none';
+            e.style.display='none';
+            f.style.display='none';
+            g.style.display='grid';
+            h.style.display='grid';
+            i.style.display='none';
+            j.style.display='none';
+            k.style.display='none';
+            l.style.display='none';
+            m.style.display='none';
+            n.style.display='none';
+            o.style.display='none';
+            p.style.display='none';
+
+        }
+    </script>
+
+    <footer class="footerhome">
+        <div class="row">
+            <div class="footer_column">
+                <h3>Our Shop</h3>
+                <ul>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Policies</a></li>
+                    <li><a href="#">Awards</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_column">
+                <h3>Contact Info</h3>
+                <ul style="color: blue;">
+                    <li><b>Address:</b> <br> Bharatpur-7, Terhasaal chowk</li>
+                    <li><b>Contact:</b> <br> +9779856374637</li>
+                    <li><b>Email:</b> <br> bonsaiworld232@gmail.com</li>
+                    <li><b>Working hours:</b> <br> 8:00 am to 8:00 pm (daily)</li>
+
+                </ul>
+            </div>
+
+            <div class="footer_column">
+                <h3>Our Categories</h3>
+                <ul>
+                    <li><a href="#">hanging</a></li>
+                    <li><a href="#">Ceramic</a></li>
+                    <li><a href="#">Indoor</a></li>
+                    <li><a href="#">Outdoor</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_column">
+                <h3>FAQs Groups</h3>
+                <ul>
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">Payment</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                </ul>
+            </div>
+
+
+            <div class="map">
+                <h3>Visit Us</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.661955294281!2d84.40939793635027!3d27.66045007415548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3994fae5fd19bf4f%3A0x33c8b5ca50f03007!2zTUM2Nis4UDUsIOCkreCksOCkpOCkquClgeCksCA0NDIwMA!5e0!3m2!1sne!2snp!4v1672331993385!5m2!1sne!2snp"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+
+            <div class="footer_column">
+                <h3>Follow Us</h3>
+                <div class="social_follow" style="margin-top: 20px; ">
+                    <a href="#"><img src="../images/facebook.png" width="30px" height="auto"></a>
+                    <a href="#"><img src="../images/twitter.jpeg" width="30px" height="auto"></a>
+                    <a href="#"><img src="../images/instagram.jpg" width="30px" height="auto"></a>
+                    <a href="#"><img src="../images/linkedin.png" width="30px" height="auto"></a>
+                    <a href="#"><img src="../images/youtube.png" width="30px" height="auto"></a>
+                </div>
+            </div>
+            <div class="app">
+                <h3>Download Our App</h3>
+                <img src="../images/qr.jpg" width="130px" height="auto">
+            </div>
+
+            <div class="signup">
+                <h3>Join With Us</h3>
+
+                <div class="email">
+                    <form action="">
+                        <label for="email"><b>Email:</b> </label>
+                        <input type="email" placeholder="Enter your email address" name="emailadd">
+                        <input type="submit" value="Sign up">
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+    </footer>
+    <footer>
+        <div class="lastfooter">
+            <hr>
+            <span>
+                <span><center><b>Developed by:</b> <a href="aboutmesaksham.html">Saksham</a>|<a href="aboutmesandesh.html">Sandesh</a>|<a href="aboutmeaachal.html">Aachal</a>|<a href="aboutmekritagya.html">Kritagya</a></center></span>
+            </span>
+        </div>
+        <div class="copyright" style="text-align: right; font-size: 13px;">copyright &copy <b>BONSAI WORLD</b>||All
+            Rights Reserved</div>
+    </footer>
+</body>
+
+</html>

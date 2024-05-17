@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" type="text/css" href="../css/home.css">
+    <style>
+        *{
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Century Gothic';
+        text-decoration: none;
+    }
+    header{
+        background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(../images/bonsainav.jpg);       /*background image and style*/
+        height: 12vh;
+        background-size: cover;
+        background-position: center;
+        opacity: 1;
+        box-shadow: 0 0 11px 5px #182B19;
+    }
+
+    body{
+        background-image: url(../images/bgphoto.jpg);
+        background-size: cover;
+        object-fit: fill;
+        background-position: center;
+        
+    }
+    .heading{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+
+    }
+    .photo{
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 20px;
+        box-shadow: 30px 100px 200px 100px rgba(0, 0, 0, 0.5);
+    }
+    .photo:hover{
+        transform: scale(1.05);
+        transition: 0.4s;
+    }
+    .Name{
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    .Name:hover{
+        color: blueviolet;
+        transition:0.3s;
+        transform: scale(0.9);
+    }
+    .feedback{
+        margin:100px 50px 50px 50px;
+        border: 3px solid black;
+        border-radius:3pc solid red;
+    }
+
+
+    .feedtitle{
+        
+        margin-bottom: 50px;
+    }
+
+
+
+    input[type=text]{
+        width:65%;
+        padding: 4px;
+        border: 3px solid #fff;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    input[type=email]{
+        width:65%;
+        padding: 4px;
+        border: 3px solid #fff;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    .inputdata{
+        margin-left: 30px;
+    }
+    .inputdatatitle{
+        font-weight: bold;
+    }
+    .button input:hover{
+        cursor: pointer;
+        background-color: green;
+        border-radius: 20%;
+        transition: 0.3s;
+    }
+    @media screen and (max-width: 480px) {
+        .container{
+            flex-direction: column;
+            align-items: center;
+        }
+        .photo{
+            margin: 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    @media(max-width:1300px){           /*media tag for signup bar*/
+          .signup{
+            margin: 50px 0px 0px 60px;
+        }
+        }
+
+
+        @media(max-width:670px){        /*media tag for navigation bar*/
+        
+        nav ul{ 
+            width: 100%;
+            
+            flex-direction: column;
+            text-align: center;
+            background-color: black;
+            opacity: 0.5;
+            
+        }
+        .nav_bar ul li{
+            padding: 15px;
+        
+        }
+        .nav_bar ul li a{
+            margin-right: 0px;
+        }
+        .logo a img{
+            width: 100px;
+        }
+
+        header{
+         background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(../images/bonsainav.jpg);       /*background image and style*/
+         height: 60vh;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="main">
+
+            <label class="logo"><a href="Home.html"><img src="../images/logo.png">
+            </label>
+
+            <nav class="nav_bar">
+                        
+            <ul>
+                <li class="active1"> <a href="Home.html">Home</a></li>
+                <li class="active2"><a href="Blogs.html">Blogs</a></li>
+                <li class="active3"><a href="Products.html">Products</a></li>
+                <li class="active3"><a href="Research.html">Research</a></li>               
+                <li class="active4"><a href="aboutus.html">About Us</a></li>
+            </ul>
+            </nav>
+
+        </div>
+    </header>
+    <div class="heading">
+        <h1>About Developers</h1>
+        <div class="container">
+            <a href="aboutmekritagya.html">
+            <img class="photo" src="../images/kritagya.jpg" alt="kritagya_photo">
+            <div class="Name">Kritagya Ghimire</div>
+            </a>
+        </div>
+        
+        <div class="container">
+            <a href="aboutmesaksham.html">
+            <img class="photo" src="../images/saksham.jpg" alt="saksham_photo">
+            <div class="Name"> Saksham Baral</div>
+            </a>
+        </div>
+
+        <div class="container">
+            <a href="aboutmesandesh.html">
+            <img class="photo" src="../images/sandesh.jpg" alt="sandesh_photo">
+            <div class="Name">Sandesh Poudel</div>
+            </a>
+        </div>
+
+        <div class="container">
+            <a href="aboutmeaachal.html">
+            <img class="photo" src="../images/aachal.jpg" alt="aachal_photo">
+            <div class="Name">Aachal Budathoki</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="feedback">
+        <div class="feedtitle"><h2><center>Drop Your Feedback</center></h2></div>
+        <div id="error"></div>
+        <form name="feedbackform" onsubmit="validate();">
+            <div class="inputdata">
+                <div class="inputdatatitle">Firstname: </div>
+                <input type="text" placeholder="First Name" name="fname">
+            </div>
+            <div class="inputdata">
+                <div class="inputdatatitle">Lastname:</div>
+                <input type="text" placeholder="Last Name" name="lname">
+            </div>
+            <div class="inputdata">
+                <div class="inputdatatitle">Phone: </div>
+                <input type="text" placeholder="Phone number" name="phone">
+            </div>
+            <div class="inputdata">
+                <div class="inputdatatitle">Email:</div>
+                <input type="email" placeholder="Email" name="email">
+            </div>
+            <div class="inputdata">
+                <div class="inputdatatitle">Your Message:</div>
+                 <textarea placeholder="Write your message" name="yourmessage" style="width: 65%; height:100px;"></textarea>
+            </div>
+            <div class="inputdata">
+            <div class="button">
+                <input onclick="validate()" value="Submit feedback">
+            </div>
+            </div>
+        </form>
+        <script src="../javascript/script.js"></script>       
+    </div>
+    <div id="1" class="d" style="margin: 0px 0px 10px 50px;"></div>
+
+   
+
+
+    <footer class="footerhome">
+        <div class="row">
+            <div class="footer_column">
+                <h3>Our Shop</h3>
+                <ul>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Policies</a></li>
+                    <li><a href="#">Awards</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_column">
+                <h3>Contact Info</h3>
+                <ul style="color: blue;">
+                    <li><b>Address:</b> <br> Bharatpur-7, Terhasaal chowk</li>
+                    <li><b>Contact:</b> <br> +9779856374637</li>
+                    <li><b>Email:</b> <br> bonsaiworld232@gmail.com</li>
+                    <li><b>Working hours:</b> <br> 8:00 am to 8:00 pm (daily)</li>
+
+                </ul>
+            </div>
+
+            <div class="footer_column">
+                <h3>Our Categories</h3>
+                <ul>
+                    <li><a href="#">hanging</a></li>
+                    <li><a href="#">Ceramic</a></li>
+                    <li><a href="#">Indoor</a></li>
+                    <li><a href="#">Outdoor</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_column">
+                <h3>FAQs Groups</h3>
+                <ul>
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">Payment</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                </ul>
+            </div>
+
+
+            <div class="map">
+                <h3>Visit Us</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.661955294281!2d84.40939793635027!3d27.66045007415548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3994fae5fd19bf4f%3A0x33c8b5ca50f03007!2zTUM2Nis4UDUsIOCkreCksOCkpOCkquClgeCksCA0NDIwMA!5e0!3m2!1sne!2snp!4v1672331993385!5m2!1sne!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+
+            <div class="footer_column">
+                <h3>Follow Us</h3>
+                <div class="social_follow" style="margin-top: 20px;">
+                    <a href="#"><img src="../images/facebook.png" width="30px" height="auto"></a>
+                    <a href="#"><img src="../images/twitter.jpeg" width="30px" height="auto"></a>
+                    <a href="#"><img src="../images/instagram.jpg" width="30px" height="auto"></a>
+                    <a href="#"><img src="../images/linkedin.png" width="30px" height="auto"></a>
+                    <a href="#"><img src="../images/youtube.png" width="30px" height="auto"></a>
+                </div>
+            </div>
+            <div class="app">
+                <h3>Download Our App</h3>
+                <img src="../images/qr.jpg" width="130px" height="auto">
+            </div>
+
+            <div class="signup">
+                <h3>Join With Us</h3>
+
+                <div class="email">
+                    <form action="">
+                    <label for="email"><b>Email:</b> </label>
+                    <input type="email" placeholder="Enter your email address" name="emailadd" style="width:180%; height:30px;">
+                    <input type="submit" value="Sign up">
+                </div>  
+            </div>
+
+            
+
+
+
+
+        </div>
+    </footer>
+
+    
+        <div class="lastfooter">
+            <hr>
+			<span><center><b>Developed by:</b> <a href="aboutmesaksham.html">Saksham</a>|<a href="aboutmesandesh.html">Sandesh</a>|<a href="aboutmeaachal.html">Aachal</a>|<a href="aboutmekritagya.html">Kritagya</a></center></span>
+        </div>
+        <div class="copyright" style="text-align: right; font-size: 13px;">copyright &copy <b>BONSAI WORLD</b>||All Rights Reserved</div>
+    </footer>
+    
+  
+</body>
+</html>
